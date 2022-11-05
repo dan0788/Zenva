@@ -1,0 +1,243 @@
+.datepicker-area{
+    padding: 5px;
+    width: 100%;
+    display: block;
+    vertical-align: baseline;
+    font: inherit;
+
+}
+.datepicker-ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0.3rem 0;
+}
+.datepicker-li{
+    margin: 0.3rem 0.8rem 0.3rem 0.8rem;
+    height: 35px;
+}
+.datepicker-select{
+    padding: 10px 32px 10px 10px;
+    color: #99a3a4;
+    background: #f9f9f9 url("data:image/svg+xml;utf8,<svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' style='color: gray;' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='currentColor' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'></path></svg>") no-repeat 89.5% 52%;
+    border: 1px solid #DDD;
+    cursor: pointer;
+    border-radius: 5px;
+    appearance: none;//elimina la flecha del select
+    background-size: 15%;
+}
+#button-calendar{
+    border-radius: 5px;
+    width: calc(1.4rem*2);
+    background: green;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2.7rem;
+    color: white;
+    cursor: pointer;
+}
+$calendar-box-width: 270px;
+$calendar-box-heith: 250px;
+.scroll-y{
+    overflow-y: auto;
+}
+#box{
+    position: absolute;
+    height: $calendar-box-heith;
+    width: $calendar-box-width;
+    #principal,#principal-years{
+        position: absolute;
+        overflow: hidden;
+        height: $calendar-box-heith;
+        width: $calendar-box-width;
+        border: solid 1px #C8C6C6;
+        background: #f9f9f9;
+        .calendar-box-years{
+            left: $calendar-box-width;
+        }
+        .calendar-box, .calendar-box-years{
+            position: absolute;
+            height: $calendar-box-heith;
+            width: $calendar-box-width;
+            background: #f9f9f9;
+            .calendar-title{
+                height: auto;
+                background: #C8C6C6;
+                border: solid 1px #C8C6C6;
+                #arrow-left, #arrow-right{
+                    height: 25px;
+                    width: 25px;
+                    color: #595260;
+                    cursor: pointer;
+                    background: transparent;
+                }
+                #arrow-left:hover, #arrow-right:hover{
+                    box-shadow: 0 0 0 0.1rem #9D9D9D;
+                    background: #DDDDDD;
+                }
+                #arrow-left:active, #arrow-right:active{
+                    box-shadow: 0 0 0 0.1rem #9D9D9D;
+                    background: #bfbdbd;
+                    color: #48434d;
+                }
+                h6{
+                    cursor: pointer;
+                }
+            }
+            .textName{
+                margin-bottom: 10px;
+                cursor: default;
+            }
+            .button-Days:hover{
+                opacity: 0.85;
+            }
+            .button-Days:active{
+                box-shadow: 0 0 0 0.1rem #9D9D9D;
+                color: #48434d;
+            }
+            .button-noDays{
+                cursor: no-drop;
+                color: #00000061;
+                margin: 1px;
+                border: solid 1px white;
+            }
+            .button-Days{
+                background: #C8C6C6;
+                border: solid 1px #999494;
+                margin: 1px;
+                cursor: pointer;
+            }
+        }
+        div[id^='boxMonths']{
+            height: 0px;
+        }
+        .button-Months {
+            top: 15%;
+            box-shadow: 0 0 0 0.05rem slateblue;
+            margin: 2px;
+            cursor: pointer;
+        }
+        div[id^='boxyear']{
+            background: #f9f9f9;
+        }
+        div[id^='year']{
+            position: relative;
+            border-color: solid 
+        }
+    }
+}
+ul{
+    list-style: none;
+}
+@keyframes traslation-month-calendar{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+@keyframes traslation-return-month-calendar{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: -0%;
+    }
+}
+@keyframes traslation-years-calendar{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@keyframes traslation-return-years-calendar{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes traslation-show-boxmonths{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 85px;
+    }
+}
+@keyframes traslation-hidden-boxmonths{
+    0%{
+        height: 85px;
+    }
+    100%{
+        height: 0px;
+    }
+}
+/*------------------------------------------*/
+#imgen{
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    background-image: url(../icons/facebook.jpg);
+    background-size: cover;
+    position: absolute;
+    -webkit-animation: traslation-month-calendar 5s ease-in-out infinite;
+    animation: traslation-month-calendar 5s ease-in-out infinite;
+}
+img:active{
+    /*transform: perspective(250px) rotate3d(1,1,1,32deg);*/
+    /*transition: all 1.5s cubic-bezier(1,.46,.48,1.68);*/
+    -webkit-animation: miAnimacion 2s ease-in-out forwards;
+    /*    display: none;
+        transition: display 0s;*/
+}
+#imgen:active{
+    -webkit-animation: slide 4s linear forwards;    
+}
+@keyframes miAnimacion{
+    0%{
+        transform: none;
+    }
+    35%{
+        transform: perspective(250px) rotateX(30deg);
+    }
+    100%{
+        transform: perspective(250px) rotateX(-90deg);
+    }
+}
+@keyframes slide {
+    100% {
+        /*left: 100%;*/
+        opacity: 40%;
+        position: absolute;
+        display:none !important;
+    }
+}
+/*--------------------------------------------------*/
+/* Step 1: Common Properties: All required to make icons render reliably */
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Step 2: Reference Individual Icons */
+.login::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f007";
+}
+
+/* Note: Make sure to include the correct weight and unicode value for the icon */
+.tps::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f1ea";
+}

@@ -1,0 +1,55 @@
+@import "../bootstrap5/scss/functions";
+@import "../bootstrap5/scss/variables";
+@import "../bootstrap5/scss/mixins";
+$input-btn-focus-box-shadow: 0 0 0 0.10rem rgba(255, 0, 0, 000);
+$btn-focus-box-shadow: $input-btn-focus-box-shadow;
+
+$box-shadow-inset: 0 0 0 0.10rem rgba(255, 0, 0, 000);
+$form-select-box-shadow: $box-shadow-inset;
+//@extends, @import, @mixin, operadores, @if @else @elseif, or, and, not(), @for $counter from 1 to 4
+@import "../bootstrap5/scss/bootstrap";
+#titulo{
+    font-size: 30px;
+}
+header{
+    /*position: fixed;*/
+    div:first-of-type{
+        section:first-child{
+
+        }
+        section:nth-of-type(2){
+            div div button:hover{
+                box-shadow: 0 0 0 0.10rem #bcbebf;/*gris*/
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        section:last-of-type{
+            div > a{
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            div > a:hover{
+                box-shadow: 0 0 0 0.10rem #bcbebf;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    div:nth-of-type(2){/*segunda fila del header*/
+
+        div:first-of-type{
+            p{
+
+            }
+        }
+        div:last-of-type{
+            div:last-of-type{
+                a:hover{
+                    box-shadow: 0 0 0 0.10rem #bcbebf;/*gris*/
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}

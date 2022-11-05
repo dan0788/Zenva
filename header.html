@@ -1,0 +1,65 @@
+<header class="bg-info w-100">
+    <div class="h-50 container-fluid row mx-0">
+        <section class="row col-md-4 h-100 mx-0">
+            <div id="titulo" class="d-flex flex-row justify-content-end px-0">
+                <p class="text-danger m-0"><b>BLOG </b></p>
+                <p class="text-success m-0"><b>DE </b></p>
+                <p class="text-warning m-0"><b>CITAS </b></p>
+            </div>
+        </section>
+        <section class="row col-md-4 mx-0 px-0"><!--segunda seccion-->
+            <div class="btn-group px-0 d-flex justify-content-center" role="group" aria-label="Button group with nested dropdown">
+                <div class="h-100" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle mx-4 h-100" aria-expanded="false" onclick="addUl_btnClick('#btnGroupDrop1', 1, 'position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(21px, 44px);')"><!--problema con click-->
+                        Home
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Dropdown link1</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link1</a></li>
+                    </ul>
+                    <button id="btnGroupDrop2" type="button" class="btn dropdown-toggle mx-4 h-100" aria-expanded="false" onclick="addUl_btnClick('#btnGroupDrop2', 2, 'position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(160px, 44px);')">
+                        Menu
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                        <li><a class="dropdown-item" href="#">Dropdown link2</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link2</a></li>
+                    </ul>
+                    <button id="btnGroupDrop3" type="button" class="btn dropdown-toggle mx-4 h-100" aria-expanded="false" onclick="addUl_btnClick('#btnGroupDrop3', 3, 'position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(298px, 44px);')">
+                        About
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+                        <li><a class="dropdown-item" href="#">Me</a></li>
+                        <li><a class="dropdown-item" href="#">Page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="row col-md-4 mx-0 px-0">
+            <div class="w-100 h-100 m-0 d-flex justify-content-around">
+                <a href="#" class="btn h-100" target="_self"><img src="icons/facebook.jpg" alt="Facebook"></a>
+                <a href="#" class="btn h-100" target="_self"><img src="icons/instagram.jpg" alt="Instagram"></a>
+                <a href="#" class="btn h-100" target="_self"><img src="icons/whatsapp.png" alt="Whatsapp"></a>
+                <a href="#" class="btn h-100" target="_self"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+                <a href="#" class="btn h-100" target="_self"><img src="icons/twitter.png" alt="Twitter"></a>
+                <a href="#" class="btn h-100" target="_self"><img src="icons/youtube.png" alt="Youtube"></a>
+            </div>
+        </section>
+    </div>
+    <div class="h-50 mx-0 container-fluid d-flex flex-row justify-content-end px-0"><!--segunda fila de header-->
+        <div class="row col-md-4 h-100 mx-0">
+            <p class="d-flex flex-row justify-content-end fw-bold px-0">El mejor lugar para buscar a ese alguien</p>
+        </div>
+        <div class="row col-md-8 h-100 mx-0 flex-row">
+            <div class="input-group w-50 h-100">
+                <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-search"></i></div>
+                <input type="text" class="form-control bg-success bg-opacity-10 border-0" placeholder="Search" aria-label="Search" aria-describedby="btnGroupAddon" name="usuario" id="usuario">
+            </div>
+            <div class="mx-0 row col-md-5">
+                <a href="#" class="btn row col-md-5 mx-0" target="_self">Únete</a>
+                <a href="#" class="btn row col-md-5 mx-0" target="_self">Ya soy miembro</a>
+            </div>
+        </div>
+    </div>
+    <script src="header.js" type="text/javascript"></script>
+    <script src="funciones.js" type="text/javascript"></script>
+</header>

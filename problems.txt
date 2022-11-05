@@ -1,0 +1,18 @@
+crear contador de clicks para mejorar la experiencia del usuario
+problema: al ingresar una foto, el programa debe recortar la imagen hasta que quede proporcional al tamaño del div
+problema: utilizar caché para eliminar demasiadas peticiones de ajax
+hacer zoom de las imágenes al hacer click en ellas
+hacer cuadros pequeños de colores para las validaciones de cada input
+crear div position fixed para contactar con asesor de call center
+box shadow rojo cuando div password esté vacío
+quitar acciones de todos los elementos HTML al accionar ESC
+utilizar las clases is_valid y is-invalid para chequear inputs 
+
+
+
+
+
+codigos
+css
+background-size cover; para q el background se ajuste al tamaño de la caja
+@keyframe permite generar una linea de tiempo

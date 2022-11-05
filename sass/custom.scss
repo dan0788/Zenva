@@ -1,0 +1,123 @@
+/*fuente de letra*/
+/*@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,@1,100&display=swap');*/
+/*bootstrap 5*/
+@import "./header";
+@import "./BackgroundImage";
+@import "./emptyStyles";
+@import "../bootstrap5/scss/functions";
+@import "../bootstrap5/scss/variables";
+@import "../bootstrap5/scss/mixins";
+$input-btn-focus-box-shadow: 0 0 0 0.10rem rgba(255, 0, 0, 000);
+$btn-focus-box-shadow: $input-btn-focus-box-shadow;
+
+$box-shadow-inset: 0 0 0 0.10rem rgba(255, 0, 0, 000);
+$form-select-box-shadow: $box-shadow-inset;
+
+@import "../bootstrap5/scss/bootstrap";
+
+
+#meetingTime{
+    padding-top: 5px;
+    div:first-of-type{
+        h5, h4{
+            color: red;
+        }
+    }
+    div:nth-of-type(2){/*div 2 de meetingTime*/
+        div{
+            select{
+                width: 15%;
+                box-shadow: 0 0 0 0.15rem rgba(255, 0, 0, 0)!important;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+            select:focus{
+                box-shadow: 0 0 0 0.1rem #6666ff!important;
+            }
+            div{
+                width: 75%;
+                box-shadow: 0 0 0 0.15rem rgba(255, 0, 0, 0)!important;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                input:focus{
+                    box-shadow: 0 0 0 0.1rem #6666ff!important;
+                }
+                ul{
+                    li{
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+main{
+    width: 80%;
+}
+//clases
+#crew{
+    max-height: 125px;/*hacer responsive*/
+}
+.br-radius-bottom-0{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.box-img-women{
+    box-shadow: 0 0 0 0.1rem #ff95c5;
+    /*hacer con javascript la animación para engrandecer el box-shadow*/
+}
+.box-img-men{
+    box-shadow: 0 0 0 0.1rem #2D46B9;
+    /*hacer con javascript la animación para engrandecer el box-shadow*/
+}
+.box-img{
+    cursor: cell;
+    width: 70px;/*hacer responsive*/
+    height: 70px;/*hacer responsive*/
+    overflow: hidden;
+}
+.box-img:hover img{
+    transform: scale(1.25);
+    filter: opacity(.8);/*para opacidad en la imagen*/
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    /*hacer con javascript la animación para añadir tiempo al volver a tamaño original*/
+}
+.box-img img{
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,500&display=swap');/*nombre*/
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');/*cursiva letra romántica*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');/*botones*/
+
+.box-name{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: inherit;
+    width: 125px;/*hacer responsive*/
+    height: 20px;/*hacer responsive*/
+}
+.box-info{
+    max-height: 20px;/*hacer responsive*/
+    max-width: 122px;/*hacer responsive*/
+    font-size: 13px;
+}
+.button-option{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+}
+.text-white-overflow{
+    text-overflow: ellipsis;/*El valor de esta palabra clave mostrará puntos suspensivos ( '…') para representar texto recortado.*/
+    white-space: nowrap;/*Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen*/
+    overflow: hidden;/*El contenido es recortado y no se muestra el exceso de texto*/
+}
+
+/*media Queries
+
+
+/*@media (pointer: coarse) {
+   tus estilos para dispositivos táctiles  
+}*/
+/*@media all and (orientation: portrait) { ... }Para aplicar una hoja de estilo solo en orientación vertical (portrait)*/
